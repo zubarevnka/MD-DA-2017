@@ -48,6 +48,7 @@ summary(linear.model.1)
 
 plot(linear.model.2)
 
+
 birthwt.noout <- birthwt[birthwt$mother.age <= 40,]
 linear.model.3 <- lm (birthwt.grams ~ mother.age, data=birthwt.noout)
 linear.model.3
