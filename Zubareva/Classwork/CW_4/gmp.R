@@ -25,14 +25,12 @@ y1 = 6611
 curve(y1 * x ^ estimate.scaling.exponent(0.15, y0 = y1)$a, xlab = "Население", ylab = "Доход на душу населения", from = 1, to = 1000);
 
 #Удалите точку из набора исходных данных случайным образом, как изменилось статистическая оценка коэффициента a?
-
 gmp <- gmp[-c(round(runif(1, 1, nrow(gmp))))] 
 a1 <- estimate.scaling.exponent(0.15) 
 a1
 a1$a - a0$a #значение a не изменилось
 
 #Запустите оценку несколько раз с разных стартовых точек. Как изменилось значение a?
-
 a2 <- estimate.scaling.exponent(0)$a
 a3 <- estimate.scaling.exponent(0.12)$a
 a4 <- estimate.scaling.exponent(0.25)$a
